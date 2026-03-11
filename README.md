@@ -41,7 +41,7 @@ Restricts inbound traffic to HTTP and ephemeral return traffic
 
 ## VPC Creation
 
-![VPC Creation](VPC-Creation.png)
+![screenshots](VPC-Creation.png)
 
    
 3. Created two subnets:
