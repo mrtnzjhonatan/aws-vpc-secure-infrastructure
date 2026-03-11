@@ -54,9 +54,6 @@ Restricts inbound traffic to HTTP and ephemeral return traffic
 
 ![Subnet Creation](https://raw.githubusercontent.com/mrtnzjhonatan/screenshots/main/Subnet-Creation.png)
 
-## NAT Gateway Creation
-
-![NAT Gateway](https://raw.githubusercontent.com/mrtnzjhonatan/screenshots/main/NAT-GW-Creation.png)
 
 3. Attached an Internet Gateway to the VPC
 
