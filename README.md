@@ -41,11 +41,8 @@ Restricts inbound traffic to HTTP and ephemeral return traffic
 
 ## VPC Creation
 
-![VPC Creation](screenshots/VPC-Creation.png)
+![VPC Creation](VPC-Creation.png)
 
-## Subnet Creation
-
-![Subnet Creation](screenshots/Subnet-Creation.png)
    
 3. Created two subnets:
    - Public Subnet: 10.0.1.0/24
@@ -53,7 +50,7 @@ Restricts inbound traffic to HTTP and ephemeral return traffic
 
 ## Subnet Creation
 
-![Subnet Creation](screenshots/Subnet-Creation.png)
+![Subnet Creation](Subnet-Creation.png)
 
 4. Attached an Internet Gateway to the VPC
 
