@@ -45,28 +45,46 @@ Restricts inbound traffic to HTTP and ephemeral return traffic
 
 
    
-3. Created two subnets:
+2. Created two subnets:
    - Public Subnet: 10.0.1.0/24
    - Private Subnet: 10.0.2.0/24
 
+
 ## Subnet Creation
 
-![Subnet Creation](Subnet-Creation.png)
+![Subnet Creation](https://raw.githubusercontent.com/mrtnzjhonatan/screenshots/main/Subnet-Creation.png)
 
-4. Attached an Internet Gateway to the VPC
+## NAT Gateway Creation
 
-5. Created a NAT Gateway in the public subnet
+![NAT Gateway](https://raw.githubusercontent.com/mrtnzjhonatan/screenshots/main/NAT-GW-Creation.png)
 
-6. Configured route tables:
+3. Attached an Internet Gateway to the VPC
+
+4. Created a NAT Gateway in the public subnet
+
+## NAT Gateway Creation
+
+![NAT Gateway](https://raw.githubusercontent.com/mrtnzjhonatan/screenshots/main/NAT-GW-Creation.png)
+
+5. Configured route tables:
    Public Route Table
    0.0.0.0/0 → Internet Gateway
 
    Private Route Table
    0.0.0.0/0 → NAT Gateway
 
-7. Configured Network ACL rules to allow HTTP traffic and ephemeral return ports
+## Route Tables
 
-8. Launched EC2 instances in both subnets for connectivity testing
+![NAT Gateway](https://raw.githubusercontent.com/mrtnzjhonatan/screenshots/main/Resource-Map.png)
+
+6. Configured Network ACL rules to allow HTTP traffic and ephemeral return ports
+
+
+## NACLs
+
+![NAT Gateway](https://raw.githubusercontent.com/mrtnzjhonatan/screenshots/main/NACL-Overview.png)
+
+7. Launched EC2 instances in both subnets for connectivity testing
 
 ## Testing and Validation
 
