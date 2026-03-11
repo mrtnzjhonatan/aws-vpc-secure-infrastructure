@@ -34,3 +34,51 @@ Private subnet routes internet traffic through the NAT Gateway
 
 Network ACL
 Restricts inbound traffic to HTTP and ephemeral return traffic
+
+## Deployment Steps
+
+1. Created a VPC with CIDR block 10.0.0.0/16
+2. Created two subnets:
+   - Public Subnet: 10.0.1.0/24
+   - Private Subnet: 10.0.2.0/24
+
+3. Attached an Internet Gateway to the VPC
+
+4. Created a NAT Gateway in the public subnet
+
+5. Configured route tables:
+   Public Route Table
+   0.0.0.0/0 → Internet Gateway
+
+   Private Route Table
+   0.0.0.0/0 → NAT Gateway
+
+6. Configured Network ACL rules to allow HTTP traffic and ephemeral return ports
+
+7. Launched EC2 instances in both subnets for connectivity testing
+
+## Testing and Validation
+
+Public EC2 Instance
+- Verified inbound HTTP connectivity from internet
+- Confirmed instance is reachable through Internet Gateway
+
+Private EC2 Instance
+- Confirmed instance cannot be accessed directly from the internet
+- Verified outbound connectivity using NAT Gateway
+
+## Troubleshooting
+
+Issue:
+Private EC2 instance could not access external websites.
+
+Cause:
+Private subnet route table was missing NAT Gateway route.
+
+Solution:
+Updated route table:
+
+0.0.0.0/0 → NAT Gateway
+
+Result:
+Outbound internet connectivity restored.
