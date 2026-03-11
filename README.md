@@ -7,7 +7,7 @@ The goal was to simulate a secure cloud environment where public-facing services
 ---
 
 ## Architecture Diagram
-![AWS Architecture](architecture/aws-vpc-diagram.png)
+![AWS Architecture](aws-vpc-architecture.png)
 
 ## Infrastructure Components
 
