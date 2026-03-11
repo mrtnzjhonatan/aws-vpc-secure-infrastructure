@@ -38,24 +38,37 @@ Restricts inbound traffic to HTTP and ephemeral return traffic
 ## Deployment Steps
 
 1. Created a VPC with CIDR block 10.0.0.0/16
-2. Created two subnets:
+
+## VPC Creation
+
+![VPC Creation](screenshots/VPC-Creation.png)
+
+## Subnet Creation
+
+![Subnet Creation](screenshots/Subnet-Creation.png)
+   
+3. Created two subnets:
    - Public Subnet: 10.0.1.0/24
    - Private Subnet: 10.0.2.0/24
 
-3. Attached an Internet Gateway to the VPC
+## Subnet Creation
 
-4. Created a NAT Gateway in the public subnet
+![Subnet Creation](screenshots/Subnet-Creation.png)
 
-5. Configured route tables:
+4. Attached an Internet Gateway to the VPC
+
+5. Created a NAT Gateway in the public subnet
+
+6. Configured route tables:
    Public Route Table
    0.0.0.0/0 → Internet Gateway
 
    Private Route Table
    0.0.0.0/0 → NAT Gateway
 
-6. Configured Network ACL rules to allow HTTP traffic and ephemeral return ports
+7. Configured Network ACL rules to allow HTTP traffic and ephemeral return ports
 
-7. Launched EC2 instances in both subnets for connectivity testing
+8. Launched EC2 instances in both subnets for connectivity testing
 
 ## Testing and Validation
 
